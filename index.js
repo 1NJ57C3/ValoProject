@@ -105,7 +105,7 @@ app.get('/ranked/:actId', (req,res) => {
     .catch(error => console.error('Error:', error));
 });
 
-app.get('/accounts/by-riot-id/:gameName/:tagLine', (req,res) => {
+app.get('/accounts/by-riot-id/:gameName%23:tagLine', (req,res) => {
     fetch(URL_RIOT + `accounts/by-riot-id/${req.params.gameName}/${req.params.tagLine}`, {
         method: "GET",
         headers: HEADERS
